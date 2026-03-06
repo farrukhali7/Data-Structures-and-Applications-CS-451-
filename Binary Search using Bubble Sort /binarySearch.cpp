@@ -24,7 +24,7 @@ void BinarySearch(int arr[] , int length ,int value){
     cout << "Value Not Found!" << endl;
 }
 
-void Sorting(int arr[] , int length){
+void bubbleSort(int arr[] , int length){
     int tmp = 0;
     for(int i = 0 ; i < length-1 ; i++){        //outer loop used for looping through elements in array
         for(int j = 0 ; j < length -i -1; j++){     //inner loop used for comparison
@@ -44,9 +44,10 @@ void Sorting(int arr[] , int length){
 int main(){
     int arr[] = {4,1,7,2,8,3,9,5,10,6};
     int length = sizeof(arr) / sizeof(arr[0]);
-    Sorting(arr , length);
+    bubbleSort(arr , length);
     int value = 14;
     BinarySearch(arr , length , value);
     value = 7;
     BinarySearch(arr , length , value);
 }
+
