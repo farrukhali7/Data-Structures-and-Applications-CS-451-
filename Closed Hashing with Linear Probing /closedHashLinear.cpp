@@ -26,12 +26,20 @@ void display(){
     }
 }
 
-void searchAndDelete(int value){
+void Delete(int value){
     for(int i = 0 ; i < table_size ; i++){
         if(value == HT[i]){
             //delete(HT[i]);  //delete(HT[i]); is invalid because delete is used to free memory allocated with new
             HT[i] = -1;
             cout << "Value Found and deleted at index: " << i << endl;
+        }
+    }
+}
+
+void search(int value){
+    for(int i =0; i < table_size ; i++){
+        if(value == HT[i]){
+            cout << "Value Found at index: " << i << endl;
         }
     }
 }
@@ -47,7 +55,7 @@ int main() {
     insert(63);
     
     display();
-    searchAndDelete(12);
-    searchAndDelete(99);
+    search(12);
+    Delete(99);
     display();
 }
